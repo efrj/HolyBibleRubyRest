@@ -17,7 +17,6 @@ get '/' do
 end
 
 get '/book/:book/chapter/:chapter/verse/:verse' do
-    verses = params['verse'].split('-')
     book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'], Verse: params['verse'])
-    json :book => book.BookName, :chapter => book.Chapter, :verse => book.Verse
+    json :book => book.BookName, :chapter => book.Chapter, :verse => book.Verse, :text => book.VText
 end
