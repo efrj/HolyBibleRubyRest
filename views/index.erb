@@ -1,21 +1,23 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Holy Bible</title>
+<title>Holy Bible Ruby Rest</title>
 <meta charset="utf-8" />
 </head>
 <body>
-<h1>Holy Bible</h1>
+<h1>Holy Bible Ruby Rest</h1>
 
 <img src="http://cfdb.owmconsulting.netdna-cdn.com/wp-content/uploads/2013/01/Holy-Bible.jpg" alt="Holy Bible">
 
 <p>This application returns Bible verses in json format.</p>
 
-<p>The translation of the Holy Bible used in this application is the King James.</p>
-
-<h2>Instructions</h2>
+<p>The translation of the Holy Bible used in this application is the <strong>King James</strong> version.</p>
 
 <p>The application is very simple and easy to perform.</p>
+
+<p>This application was developed with the Ruby programming language with the micro framework Sinatra and SQLite database.</p>
+
+<h2>Instructions</h2>
 
 <p>To start go to the directory where the application is through the console and run the <em>'bundle install'</em> command to install the application dependencies.</p>
 
@@ -25,15 +27,11 @@
 
 <p>For some biblical verse format json enter the book abbreviation, chapter and verse number in the url number to get the desired passage.</p>
 
-<p>If you do not inform the verse, it will always return the first verse of the chapter of the requested book.</p>
-
 <h3>See the example:</h3>
-<code>http://localhost:4567/book/Gen/1/5</code>
+<code>http://localhost:4567/book/Re/chapter/4/verse/10</code>
 
-<p>If you want to enter a range of verses, just tell verses separated by a hyphen.</p>
-
-<h3>Example with verses intervals:</h3>
-<code>http://localhost:4567/book/Gen/1/5-10</code>
+<h4>json Return</h4>
+<pre>{"book":"Revelation","chapter":"4","verse":"10","text":"The four and twenty elders fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,"}</pre>
 
 <h2>List of books with their respective abbreviations for you informed in the book the url parameter</h2>
 
