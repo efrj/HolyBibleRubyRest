@@ -22,7 +22,12 @@ For some biblical verse format json enter the book abbreviation, chapter and ver
 
 ###See the example:
 
-http://localhost:4567/Gen/1/5
+**http://localhost:4567/Gen/1/5**
+
+#### json Return
+```javascript
+{"book":"Revelation","chapter":"4","verse":"10","text":"The four and twenty elders fall down before him that sat on the throne, and worship him that liveth for ever and ever, and cast their crowns before the throne, saying,"}
+```
 
 ##List of books with their respective abbreviations for you informed in the book the url parameter
 
