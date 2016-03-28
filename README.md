@@ -22,7 +22,7 @@ For some biblical verse format json enter the book abbreviation, chapter and ver
 
 ###See the example:
 
-**http://localhost:4567/Gen/1/5**
+**http://localhost:4567/book/Re/chapter/4/verse/10**
 
 #### json Return
 ```javascript
