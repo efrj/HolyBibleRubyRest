@@ -68,7 +68,7 @@ http://localhost:4567/Gen/1/5
 38. Zechariah - Zec
 39. Malachi - Mal
 
-## New Testament
+###New Testament
 
 1. Matthew - Mt
 2. Mark - Mr
