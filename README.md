@@ -87,7 +87,7 @@ To get all the verses of a chapter, enter the abbreviation of the book and the c
 38. Zechariah - Zec
 39. Malachi - Mal
 
-###New Testament
+### New Testament
 
 1. Matthew - Mt
 2. Mark - Mr
