@@ -18,7 +18,7 @@ To start go to the directory where the application is through the console and ru
 
 Then use the 'ruby app.rb' command to run the application.
 
-View the application in the browser at the address: 'http://localhost:4567'.
+If you are using the default localhost address, view the application in the browser at the address: 'http://localhost:4567'.
 
 For some biblical verse format json enter the book abbreviation, chapter and verse number in the url number to get the desired passage.
 
