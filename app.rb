@@ -9,20 +9,20 @@ ActiveRecord::Base.establish_connection(
 )
 
 class Bible < ActiveRecord::Base
-    self.table_name = "Bible"
+  self.table_name = "Bible"
 end
 
 get '/' do
-    erb :index
+  erb :index
 end
 
 get '/book/:book/chapter/:chapter' do
-    book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'])
-    verses = Bible.where(["BookAbr = ?", params['book']]).where(["Chapter = ?", params['chapter']]).select("Verse as verse, VText as text").all
-    json :book => book.BookName, :chapter => book.Chapter, :verses => verses
+  book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'])
+  verses = Bible.where(["BookAbr = ?", params['book']]).where(["Chapter = ?", params['chapter']]).select("Verse as verse, VText as text").all
+  json :book => book.BookName, :chapter => book.Chapter, :verses => verses
 end
 
 get '/book/:book/chapter/:chapter/verse/:verse' do
-    book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'], Verse: params['verse'])
-    json :book => book.BookName, :chapter => book.Chapter, :verse => book.Verse, :text => book.VText
+  book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'],Verse: params['verse'])
+  json :book => book.BookName, :chapter => book.Chapter, :verse => book.Verse, :text => book.VText
 end
