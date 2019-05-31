@@ -22,7 +22,7 @@ For some biblical verse format json enter the book abbreviation, chapter and ver
 
 #### See the example:
 
-**http://your-host/book/Re/chapter/4/verse/10**
+**http://your-host/books/Re/chapters/4/verses/10**
 
 ##### json Return
 ```javascript
@@ -34,7 +34,7 @@ To get all the verses of a chapter, enter the abbreviation of the book and the c
 
 #### See the example:
 
-**http://your-host/book/Re/chapter/4**
+**http://your-host/books/Re/chapters/4**
 
 #### json Return
 ```javascript
