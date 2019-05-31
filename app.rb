@@ -16,7 +16,7 @@ get '/' do
   erb :index
 end
 
-get '/book/:book/chapter/:chapter' do
+get '/books/:book/chapters/:chapter' do
   book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'])
   verses = Bible.where(["BookAbr = ?", params['book']])
             .where(["Chapter = ?", params['chapter']])
@@ -25,7 +25,7 @@ get '/book/:book/chapter/:chapter' do
   json :book => book.BookName, :chapter => book.Chapter, :verses => verses
 end
 
-get '/book/:book/chapter/:chapter/verse/:verse' do
+get '/books/:book/chapters/:chapter/verses/:verse' do
   book = Bible.find_by(BookAbr: params['book'], Chapter: params['chapter'],Verse: params['verse'])
   json :book => book.BookName, :chapter => book.Chapter, :verse => book.Verse, :text => book.VText
 end
