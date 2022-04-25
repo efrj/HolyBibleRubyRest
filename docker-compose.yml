@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+
+  ruby:
+    build: ./
+    image: ruby
+    volumes:
+      - .:/app
+    container_name: ruby.holybible
+    ports:
+      - "3001:3000"
+    #entrypoint: /bin/sh -c "shotgun config.ru -p$${APP_PORT} -s$${APP_SERVER} -o$${APP_HOST}"
+    links:
+      - sqlite3
+
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    container_name: sqlite.holy_bible_ruby
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./db/:/root/db/
+
+  admininastror:
+    image: adminer
+    restart: always
+    ports:
+      - "3091:8080"
+    container_name: adminer.holy_bible_ruby
+    links:
+      - sqlite3
