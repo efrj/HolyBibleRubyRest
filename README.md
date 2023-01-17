@@ -18,11 +18,17 @@ Then use the 'ruby app.rb' command to run the application.
 
 If you are using the default localhost address, view the application in the browser at the address: 'http://localhost:4567'.
 
+### Run with Docker 
+Execute the command 
+**docker-compose up** 
+
+If you are using the default localhost address, view the application in the browser at the address: 'http://localhost:8080'.
+
 For some biblical verse format json enter the book abbreviation, chapter and verse number in the url number to get the desired passage.
 
 #### See the example:
 
-**http://your-host/books/Re/chapters/4/verses/10**
+**http://your-host/book/Re/chapter/4/verse/10**
 
 ##### json Return
 ```javascript
@@ -34,7 +40,7 @@ To get all the verses of a chapter, enter the abbreviation of the book and the c
 
 #### See the example:
 
-**http://your-host/books/Re/chapters/4**
+**http://your-host/book/Re/chapter/4**
 
 #### json Return
 ```javascript
