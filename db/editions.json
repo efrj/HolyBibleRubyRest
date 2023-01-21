@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "language": "English",
+        "language_abr": "en",
+        "edition": "King James",
+        "year": "1994"
+    },
+    {
+        "id": 2,
+        "language": "Portuguese",
+        "language_abr": "pt",
+        "edition": "Almeida Revista e Atualizada",
+        "year": "1992"
+    }
+]

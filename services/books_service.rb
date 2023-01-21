@@ -1,20 +1,13 @@
 require_relative "../models/bible"
+require "json"
 
 class BooksService
-  def self.editions
-    data = [
-      {},
-      {
-          "language" => "English",
-          "language_abr" => "en",
-          "edition" => "King James"
-      },
-      {
-          "language" => "Portuguese",
-          "language_abr" => "pt",
-          "edition" => "Almeida Revista e Atualizada"
-      }
-    ]
+  def self.editions(id)
+    # file = File.open "db/editions.json"
+    # data = JSON.load file
+    id = id.to_i - 1
+    data = JSON.parse(File.read('db/editions.json'))
+    return data[id]
   end
 
   def self.find_verses(book_edition, book_abr, chapter_number, verse_number)
@@ -39,7 +32,7 @@ class BooksService
     end
 
     data = {
-      book_edition: self.editions[book_edition.to_i],
+      book_edition: self.editions(book_edition),
       book: book.BookName,
       chapter: book.Chapter,
       verses: verses

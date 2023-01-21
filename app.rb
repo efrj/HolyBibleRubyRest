@@ -1,10 +1,14 @@
 require 'sinatra'
 require "sinatra/json"
 require_relative "services/books_service"
-require_relative "models/bible"
 
 get '/' do
   erb :index
+end
+
+get '/editions' do
+  data = BooksService.editions
+  json data
 end
 
 post '/bible-verses' do
