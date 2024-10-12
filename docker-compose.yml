@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
   ruby:
     build: ./
     image: ruby-sinatra
@@ -10,4 +9,4 @@ services:
     container_name: ruby.holybible
     ports:
       - "8080:3000"
-    entrypoint: ruby app.rb -p 3000 -o 0.0.0.0
+    command: bundle exec rackup -p 3000 -o 0.0.0.0
