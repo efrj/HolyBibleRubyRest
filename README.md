@@ -1,7 +1,5 @@
 # Holy Bible Ruby Rest
 
-![alt text](http://www.wowfreestuff.co.uk/wp-content/uploads/2017/06/free-holy-bible.jpg "Holy Bible")
-
 Holy Bible PHP Rest is a simple and easy-to-execute REST application that returns Holy Bible verses in json format.
 
 The translation of the Holy Bible used in this application is the King James version.
