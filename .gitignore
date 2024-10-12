@@ -9,3 +9,5 @@
 
 /Gemfile.lock
 Gemfile.lock
+*.db-shm
+*.db-wal
